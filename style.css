@@ -11,7 +11,7 @@
   scroll-behavior: smooth;
   --primary-color: #3cab9b;
   --white: #fff;
-  --black: #100c08;
+  --black: #2e282a;
 }
 
 body {
@@ -166,6 +166,7 @@ a {
   min-height: calc(100vh - 100px);
   background-color: var(--primary-color);
   color: var(--white);
+  display: flex;
 }
 
 .hero-container {
@@ -175,6 +176,7 @@ a {
 
 .hero-img {
   opacity: 0.8;
+  margin-top: 16px;
 }
 
 .hero-title {
@@ -234,3 +236,82 @@ a {
   }
 }
 /* === END OF HERO === */
+
+/* === SERVICES === */
+.services {
+  background-color: var(--black);
+  color: var(--white);
+  min-height: 70vh;
+}
+
+.services-p,
+.services-h2 {
+  text-align: center;
+}
+
+.services-p {
+  text-transform: uppercase;
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+
+.services-h2,
+.cards-container {
+  max-width: 85%;
+  margin: auto;
+}
+
+.cards-container {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.card {
+  border: 2px solid var(--primary-color);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.card-icon {
+  color: var(--primary-color);
+}
+
+.card-description h4 {
+  margin: 12px auto;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1025px) {
+  .services {
+    min-height: max-content;
+  }
+
+  .services-p {
+    font-size: 22px;
+  }
+
+  .services-h2 {
+    font-size: 36px;
+  }
+  .cards-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    max-width: 30%;
+  }
+
+  .card-icon {
+    font-size: 30px;
+  }
+
+  .card-description h4 {
+    font-size: 24px;
+  }
+
+  .card-description p {
+    font-size: 18px;
+  }
+}
+/* === END OF SERVICES === */
