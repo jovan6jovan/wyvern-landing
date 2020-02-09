@@ -163,20 +163,26 @@ a {
 
 /* === HERO === */
 .hero {
-  min-height: calc(100vh - 100px);
+  /* min-height: calc(100vh - 100px); */
   background-color: var(--primary-color);
   color: var(--white);
-  display: flex;
 }
 
 .hero-container {
   max-width: 85%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content {
+  flex-grow: 2;
 }
 
 .hero-img {
   opacity: 0.8;
   margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .hero-title {
@@ -198,7 +204,7 @@ a {
   }
 
   .hero-container {
-    display: flex;
+    flex-direction: row;
     max-width: 100%;
   }
 
@@ -251,8 +257,8 @@ a {
 
 .services-p {
   text-transform: uppercase;
-  padding-top: 16px;
-  margin-bottom: 16px;
+  padding-top: 32px;
+  margin-bottom: 32px;
 }
 
 .services-h2,
@@ -263,7 +269,7 @@ a {
 
 .cards-container {
   text-align: center;
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .card {
@@ -300,6 +306,7 @@ a {
 
   .card {
     max-width: 30%;
+    margin-bottom: 40px;
   }
 
   .card-icon {
@@ -315,3 +322,82 @@ a {
   }
 }
 /* === END OF SERVICES === */
+
+/* === ABOUT === */
+.about {
+  background: linear-gradient(
+      to bottom,
+      rgba(60, 171, 155, 0.8),
+      rgba(60, 171, 155, 0.7)
+    ),
+    url("images/code.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.about-container {
+  max-width: 85%;
+  margin: auto;
+  padding: 32px 0;
+}
+
+.about-img {
+  margin-bottom: 32px;
+}
+
+.about-img img {
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.about-description {
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 16px;
+  text-align: center;
+  z-index: 99;
+}
+
+.about-description h2 {
+  margin-bottom: 12px;
+}
+
+/* LAPTOPS AND BIGGER SCREENS */
+@media screen and (min-width: 1025px) {
+  .about {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-container {
+    display: flex;
+  }
+
+  .about-img {
+    margin-bottom: 0;
+  }
+
+  .about-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-left: -80px;
+    padding: 0;
+  }
+
+  .about-description h2 {
+    margin: 32px 0;
+  }
+
+  .about-description p {
+    max-width: 85%;
+    margin: 0 auto 32px auto;
+    font-size: 18px;
+  }
+}
+/* === END OF ABOUT === */
