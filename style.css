@@ -67,11 +67,16 @@ a {
 
 .main-nav {
   display: none;
+  background-color: var(--black);
 }
 
 .main-nav li {
   text-align: center;
   margin: 14px auto;
+}
+
+.main-nav li:first-child {
+  padding-top: 14px;
 }
 
 .main-nav li:last-child {
@@ -81,7 +86,7 @@ a {
 
 .logo {
   display: inline-block;
-  margin: 10px 0 10px 20px;
+  margin: 16px 0 0 32px;
   width: 100px;
 }
 
@@ -94,8 +99,8 @@ a {
 
 .navbar-toggle {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 16px;
+  right: 32px;
   cursor: pointer;
   color: var(--white);
   font-size: 32px;
@@ -137,10 +142,15 @@ a {
     justify-content: flex-end;
     align-items: center;
     font-size: 24px;
+    background-color: transparent;
   }
 
   .main-nav li {
     margin: 0;
+  }
+
+  .main-nav li:first-child {
+    padding-top: 0;
   }
 
   .main-nav li:last-child {
@@ -149,6 +159,11 @@ a {
 
   .nav-links {
     margin-left: 28px;
+  }
+
+  .nav-links:hover {
+    color: var(--black);
+    transition: 0.5s;
   }
 
   .logo {
@@ -213,6 +228,11 @@ a {
     margin-left: 5%;
   }
 
+  .hero-img {
+    background-color: var(--white);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  }
+
   .hero-title {
     font-size: 56px;
   }
@@ -270,12 +290,17 @@ a {
 .cards-container {
   text-align: center;
   margin-top: 40px;
+  padding-bottom: 24px;
 }
 
 .card {
   border: 2px solid var(--primary-color);
   padding: 16px;
   margin-bottom: 24px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
 }
 
 .card-icon {
@@ -306,6 +331,10 @@ a {
 
   .card {
     max-width: 30%;
+    margin-bottom: 40px;
+  }
+
+  .card:last-child {
     margin-bottom: 40px;
   }
 
@@ -361,6 +390,10 @@ a {
 
 .about-description h2 {
   margin-bottom: 12px;
+}
+
+.about-description a {
+  color: var(--primary-color);
 }
 
 /* LAPTOPS AND BIGGER SCREENS */
