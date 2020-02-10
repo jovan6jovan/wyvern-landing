@@ -56,6 +56,7 @@ a {
   border: 2px solid var(--white);
   padding: 10px 16px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 /* === END OF GLOBAL === */
 
@@ -230,7 +231,16 @@ a {
 
   .hero-img {
     background-color: var(--white);
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(
+      20% 0%,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    );
   }
 
   .hero-title {
@@ -252,7 +262,7 @@ a {
   .hero-btn:focus {
     box-shadow: inset -7.5em 0 0 0 var(--white), inset 7.5em 0 0 0 var(--white);
     color: var(--primary-color);
-}
+  }
 
   .hero-img {
     display: flex;
@@ -434,3 +444,85 @@ a {
   }
 }
 /* === END OF ABOUT === */
+
+/* === CONTACT === */
+.contact {
+  background-color: var(--black);
+  letter-spacing: 1px;
+}
+
+.contact,
+.contact a {
+  color: var(--primary-color);
+}
+
+.contact a {
+  display: block;
+}
+
+.contact a:hover {
+  color: var(--white);
+  transition: 0.5s;
+}
+
+.contact h2,
+.contact h4 {
+  color: var(--white);
+}
+
+.contact h2 {
+  padding-top: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact h4 {
+  margin: 8px 0;
+}
+
+.contact-boxes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.email-box {
+  margin-bottom: 32px;
+}
+
+.phone-box {
+  margin-bottom: 16px;
+}
+
+/* LAPTOPS AND BIGGER SCREENS */
+@media screen and (min-width: 1025px) {
+  .contact h2 {
+    font-size: 36px;
+  }
+
+  .contact h4 {
+    font-size: 24px;
+    margin: 16px auto;
+  }
+
+  .contact a {
+    display: inline;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .contact a:last-child {
+    margin-left: 12px;
+  }
+
+  .contact-boxes-container {
+    width: 85%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+/* === END OF CONTACT === */
