@@ -494,6 +494,13 @@ a {
 
 .phone-box {
   margin-bottom: 16px;
+  width: 100%;
+}
+
+.phone-box-numbers {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 /* LAPTOPS AND BIGGER SCREENS */
@@ -523,6 +530,14 @@ a {
     margin: auto;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .phone-box {
+    width: fit-content;
+  }
+
+  .phone-box-numbers {
+    flex-direction: column;
   }
 }
 /* === END OF CONTACT === */
