@@ -533,7 +533,7 @@ a {
   }
 
   .phone-box {
-    width: fit-content;
+    width: auto;
   }
 
   .phone-box-numbers {
